@@ -3,11 +3,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NormalMenu">
-
-    <Button
-        android:id="@+id/test_event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试事件" />
-</FrameLayout>
+    tools:context=".NormalMenu"/>
