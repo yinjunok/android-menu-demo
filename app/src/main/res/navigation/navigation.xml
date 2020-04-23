@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/start2"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/bottomSheetMenu"
+        android:name="com.example.menudemo.BottomSheetMenu"
+        android:label="底部弹出菜单"
+        tools:layout="@layout/fragment_bottom_sheet_menu" >
+        <action
+            android:id="@+id/action_bottomSheetMenu_to_start2"
+            app:destination="@id/start2" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalMenu"
+        android:name="com.example.menudemo.NormalMenu"
+        android:label="正常"
+        tools:layout="@layout/fragment_normal_menu" >
+        <action
+            android:id="@+id/action_normalMenu_to_start2"
+            app:destination="@id/start2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sideMenu"
+        android:name="com.example.menudemo.SideMenu"
+        android:label="侧滑菜单"
+        tools:layout="@layout/fragment_side_menu" >
+        <action
+            android:id="@+id/action_sideMenu_to_start2"
+            app:destination="@id/start2" />
+    </fragment>
+    <fragment
+        android:id="@+id/popupMenu"
+        android:name="com.example.menudemo.PopupMenuDemo"
+        android:label="弹出菜单"
+        tools:layout="@layout/fragment_popup_menu" >
+        <action
+            android:id="@+id/action_popupMenu_to_start2"
+            app:destination="@id/start2" />
+    </fragment>
+    <fragment
+        android:id="@+id/start2"
+        android:name="com.example.menudemo.Start"
+        android:label="开始"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_start2_to_normalMenu"
+            app:destination="@id/normalMenu" />
+        <action
+            android:id="@+id/action_start2_to_sideMenu"
+            app:destination="@id/sideMenu" />
+        <action
+            android:id="@+id/action_start2_to_sideMenu2"
+            app:destination="@id/sideMenu" />
+        <action
+            android:id="@+id/action_start2_to_popupMenu"
+            app:destination="@id/popupMenu" />
+        <action
+            android:id="@+id/action_start2_to_bottomSheetMenu"
+            app:destination="@id/bottomSheetMenu" />
+    </fragment>
+</navigation>
